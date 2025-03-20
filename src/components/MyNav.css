@@ -2,7 +2,7 @@
 
   height: 5rem;
   width: 100%;
-  background-color: rgb(230, 243, 255);
+  background-color: rgb(16, 33, 42);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +12,7 @@
 
 #Nav #nav1 h1 {
   cursor: pointer;
+  color: aliceblue;
 }
 
 #nav2 ul {
@@ -20,36 +21,32 @@
   /* Added flex to align links horizontally */
   gap: 40px;
   font-size: 20px;
-
-
 }
 
 #nav2 #hamburger {
   display: none;
+  color: white;
 }
 
 #nav2 ul li a {
   text-decoration: none;
   /* Applied directly to links */
-  color: black;
+  color: white;
   font-weight: 545;
   transition: color 0.3s ease-in-out;
 }
 
 .active-link {
   padding: 12px;
-  /* background-color: rgba(69, 60, 226, 0.648); */
   text-decoration: none;
   border-radius: 100px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 5px solid rgb(226, 144, 144);
 
-  /* transition: all ease .2s ; */
 }
 
 .active-link:hover {
 
-  border: 2px solid rgb(0, 0, 0);
-
+  border: 5px solid rgb(228, 169, 169);
 }
 
 @media (max-width: 1200px) {

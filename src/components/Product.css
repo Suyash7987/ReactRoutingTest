@@ -11,17 +11,28 @@
   #headline {
     height: 200px;
     width: 100%;
-    background-color: azure;
+    background-color: rgb(49, 82, 77);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     font-size: 20px;
     text-align: center;
   }
-  
+  #headline i{
+     font-size: 50px;
+     color: rgb(255, 255, 255);
+     
+  }
+  #headline h1{
+    font-size: 50px;
+    font-family: cursive;
+    color: #ffc88a;
+    
+ }
   /* Inner container (grid setup for displaying items) */
   #innerdiv {
-    height: 740px;
+    height: 700px;
     width: 100%;
     /* background-color:rgb(180, 216, 245); */
     display:grid;
@@ -33,14 +44,10 @@
   
   /* Individual item container */
   .items {
-    background-color: rgba(255, 183, 0, 0.725);
+    background-color: rgba(224, 200, 140, 0.725);
     border-radius: 20px; /* Optional rounded corners */
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; */
-    height: 500px;
+    height: 450px;
     width: 340px;
   }
   
@@ -61,17 +68,43 @@
     gap: 10px;   
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    
+    align-items: center;   
   }
-  #item-lower button {
-    padding: 15px;
+  #itemslower
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+  }
+  #itemslower-2
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+  }
+  #itemslower #Link{
+       text-decoration: none;
+       color: black;
+       padding: 15px;
+       border-radius: 20px;
+       background-color: white;  
+  }
+  #itemslower button  {
+    
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 50px;
     border: none;
+    list-style: none;
     font-size: 17px;
-    margin: 0;
+    width: 130px;
+    
+}
+#item-lower #Link:hover{
+    background-color: black;
+    color: white;
+    transition: all ease .2s;
 }
 #item-lower button:hover{
      background-color: black;
