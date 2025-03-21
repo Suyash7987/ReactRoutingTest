@@ -166,3 +166,246 @@
      color:white;
      transition: all ease.2s;
 }
+@media(max-width:1440px){
+      #Viewmain-right{
+          height: 82vh;
+      }
+      #Viewman-right-upper
+      {
+          gap: 7px;
+      } 
+      #Viewman-right-upper h1,h2{
+         
+           font-size: 29px;
+      }
+      #Viewman-right-upper h4{
+          padding: 9px 9px;
+          width: 21vw;
+      }
+      #Viewmain-right-Middle{
+          padding: 11px;
+          gap: 10px;
+      }
+      #Viewmain-right-Lower{
+           height: 26vh;
+      }
+      #Viewmain-right-Lower1{
+          height: 20vh;
+          text-align: center;
+          
+      }
+      #Viewmain-left{
+           padding: 35px;
+      }
+      #Viewmain-left-bottom{
+           width: 25vw;
+      }
+      #Colorbox{
+          height: 8vh;
+          width: 5vw;
+      }
+}
+@media(max-width:1024px){
+     #Viewmain-right{
+         height: 82vh;
+     }
+     #Viewman-right-upper
+     {
+         gap: 7px;
+     } 
+     #Viewman-right-upper h1,h2{
+        
+          font-size:24px;
+     }
+     #Viewman-right-upper h4{
+          padding: 8px 10px;
+          width: 29vw;
+     }
+     #p {
+          font-size: 14px;
+      }
+     #Viewmain-right-Middle{
+         padding: 11px;
+         gap: 10px;
+     }
+     #Viewmain-right-Lower{
+          height: 22vh;
+          padding: 3%;
+          width: 112%;
+     }
+     #Viewmain-right-Lower1{
+          height: 15vh;
+          padding: 0px;
+          text-align: center;
+     }
+     #Viewmain-right-Lower1 #eye {
+          font-size: 20px;
+     }
+     #Viewmain-right-Lower1 h3 {
+          font-size: 15px;
+     }
+     #Viewmain-right-Lower2 {
+          height: 15%;
+          width: 46vw;
+     }
+     #Viewmain-left{
+          padding: 35px;
+          
+     }
+     #Viewmain-left-upper{
+     
+          height:25vh
+     }
+     #Viewmain-left img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+     }
+     #Viewmain-left-bottom{
+          width: 28vw;
+          padding: 0px;
+     }
+     #Colorbox{
+         height: 8vh;
+         width: 8vw;
+     }
+}
+
+@media(max-width:768px){
+     #Viewmain{
+           flex-direction: column;
+     }
+     #Viewmain-right{
+         height: 82vh;
+         width: 85vw;
+     }
+     #Viewman-right-upper
+     {
+         gap: 8px;
+     } 
+     #Viewman-right-upper h1,h2{
+        
+          font-size:25px;
+     }
+     #Viewman-right-upper h4{
+          font-size: 15px;
+          padding: 20px;
+          width: 40vw;
+     }
+     #p {
+          font-size: 14px;
+      }
+     #Viewmain-right-Middle{
+         padding: 15px;
+         gap: 10px;
+     }
+     #Viewmain-right-Lower{
+          height: 18vh;
+          width: 77vw;
+          padding: 3%
+     }
+     #Viewmain-right-Lower1{
+          height: 15vh;
+          padding: 0px;
+          text-align: center;
+     }
+     #Viewmain-right-Lower1 #eye {
+          font-size: 20px;
+     }
+     #Viewmain-right-Lower1 h3 {
+          font-size: 15px;
+     }
+     #Viewmain-right-Lower2 {
+          height: 15%;
+          width: 80vw;
+     }
+     #Viewmain-left-upper{
+            width: 50vw;
+     }
+     #Viewmain-left {
+          padding: 29px;
+          width: 85vw;
+          gap: 20px;
+      }
+     #Viewmain-left-bottom{
+          width:51vw;
+     }
+     #Colorbox{
+         height: 8vh;
+         width: 12vw;
+     }
+}
+@media(max-width:500px){
+     #Viewmain{
+           flex-direction: column;
+           align-items: center;
+     }
+     #Viewmain-right{
+         height: 110vh;
+         width: 85vw;
+     }
+     #Viewman-right-upper
+     {
+         gap: 3px;
+     } 
+     #Viewman-right-upper h1,h2{
+        
+          font-size:25px;
+     }
+     #Viewman-right-upper h4{
+          font-size: 15px;
+          padding: 15px;
+          width: 56vw;
+     }
+     #p {
+          font-size: 13px;
+      }
+     #Viewmain-right-Middle{
+         padding: 15px;
+         gap: 9px;
+     }
+     #Viewmain-right-Lower{
+          height: 40vh;
+          flex-direction: column;
+          padding: 3%
+     }
+     #Viewmain-right-Lower1{
+          height: 15vh;
+          padding: 0px;
+          text-align: center;
+     }
+     #Viewmain-right-Lower1 #eye {
+          font-size: 20px;
+     }
+     #Viewmain-right-Lower1 h3 {
+          font-size: 15px;
+     }
+     #Viewmain-right-Lower2 {
+          height: 15%;
+          width: 80vw;
+     }
+     #Viewmain-right-Lower2 button {
+          width: auto;
+          font-size: 15px;
+     }
+     #Viewmain-left-upper{
+            width: 75vw;
+     }
+     #Viewmain-left-upper img{
+          height: 35vh;
+          width: 75vw;
+   }
+     #Viewmain-left {
+          padding: 29px;
+          width: 85vw;
+          gap: 20px;
+      }
+     #Viewmain-left-bottom{
+          width:76vw;
+     }
+     
+     #Colorbox{
+         height: 8vh;
+         width: 19vw;
+     }
+}

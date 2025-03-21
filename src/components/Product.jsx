@@ -22,7 +22,7 @@ function Product() {
   useEffect(() => {
      setTimeout(() => {
       setLoading(false);
-    }, 1000); 
+    }, 500); 
     
   }, []);
 
@@ -42,7 +42,7 @@ function Product() {
           fontSize: "40px",
           marginLeft: "38%",
         }}>
-          <h4>Redirecting...</h4>
+          <h4>Loading...</h4>
         </div>
       </div>
     );

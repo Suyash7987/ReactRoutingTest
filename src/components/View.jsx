@@ -42,7 +42,7 @@ function View() {
            </div>
            <div id="Viewmain-right-Middle">
               <h3>Description</h3>
-              <p> Sunglasses from Tees By Fastrack. Shades are designed to save your eyes from harmful UV rays while providing best in class style. (M8022GR7V). Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo obcaecati nesciunt nemo repudiandae unde optio! Quo porro quibusdam et consequuntur.</p>
+              <p id="p"> Sunglasses from Tees By Fastrack. Shades are designed to save your eyes from harmful UV rays while providing best in class style. (M8022GR7V). Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo obcaecati nesciunt nemo repudiandae unde optio! Quo porro quibusdam et consequuntur.</p>
            </div>
            <div id="Viewmain-right-Lower">
              <div id="Viewmain-right-Lower1">
