@@ -41,7 +41,7 @@ function Contact() {
           <form onSubmit={handleSubmit(onSubmit)}>
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Name", {
-                required: "Name is required",
+                required: " *Name is required",
               })}
               pattern="[A-Za-z ]{3,30}"
               type="text"
@@ -54,7 +54,7 @@ function Contact() {
               <p
                 style={{
                   position: "absolute",
-                  marginTop: "-2%",
+                  marginTop: "-1.5%",
                   color: "red",
                 }}
               >
@@ -63,7 +63,7 @@ function Contact() {
             )}
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Email", {
-                required: true,
+                required: "*Email is required",
               })}
               type="email"
               placeholder="Email"
@@ -74,16 +74,16 @@ function Contact() {
               <p
                 style={{
                   position: "absolute",
-                  marginTop: "-2%",
+                  marginTop: "-1.5%",
                   color: "red",
                 }}
               >
-                Email is required
+                {errors.Email.message}
               </p>
             )}
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Contact", {
-                required: "Contact is Required",
+                required: " *Contact is Required",
               
                 minLength: {
                   value: 10,
@@ -104,7 +104,7 @@ function Contact() {
               <p
                 style={{
                   position: "absolute",
-                  marginTop: "-2%",
+                  marginTop: "-1.5%",
                   color: "red",
                 }}
               >

@@ -212,9 +212,11 @@
     }
     #Login-Right {
         width: 75%;
+        height: 750px;
         padding: 10px;
         text-align: center;
         margin-left: 100px;
+        background-color: white;
     }
     #Login-Right p{
          left: 175px;

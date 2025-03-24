@@ -55,7 +55,7 @@ function Product() {
         <div id='ProMain'>
           <div id="headline">
           <i class="ri-glasses-2-line"></i>
-          <h1>Shades on,Worries gone</h1>
+          <h1 id='h1'>Shades on,Worries gone</h1>
          <i class="ri-glasses-2-line"></i>
           </div>
           <div id="innerdiv">

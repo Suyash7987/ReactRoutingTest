@@ -29,18 +29,19 @@
  }
 
  #ContactMiddle{
-   height: 600px;
-   padding: 10px 300px;
+   /* height: 600px; */
    background-color: rgb(230, 243, 255);  
    display: flex;
-   gap: 2.5px;
+   padding: 70px;
+   justify-content: center;
+   gap: 15px;
 } 
  #Middle-Left{
-     height: 500px;
-     width:650px;
+     /* height: 500px; */
+     width:571px;
      /* background-color: pink; */
      border: 2px solid black;
-     padding: 40px 40px;
+     padding: 40px;
      display: flex;
      flex-direction: column;
      text-align: center;
@@ -59,15 +60,13 @@
     color: brown;
  }
  #Middle-Right{
-   height: 500px;
-   width:800px;
    padding: 15px 30px;
    text-align: center;
    /* background-color: yellow; */
    border: 2px solid black;
 }
 #Middle-Right h2{
-    margin-bottom: 20px;
+   padding: 25px;
 }
 #Middle-Right form input,
 #Middle-Right form textarea {
@@ -223,9 +222,8 @@
 
 @media (max-width: 480px) {
    #ContactMiddle {
-       padding: 10px 10px; /* Minimal padding for very small screens */
+       padding: 10px; /* Minimal padding for very small screens */
        flex-direction: column;
-       height: 940px;
    }
 
    #Middle-Left h2 {

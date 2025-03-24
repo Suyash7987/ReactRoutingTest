@@ -115,7 +115,7 @@
      color: white;
      transition: all ease .2s;
 }
-  h1 {
+  #h1 {
     font-size: 30px;
     
   }
@@ -152,7 +152,7 @@
         font-size: 16px;
     }
 
-    h1 {
+    #h1 {
         font-size: 28px;
     }
 
@@ -167,8 +167,8 @@
         height: 162vh; 
     }
 
-    #headline {
-        font-size: 18px; /* Smaller font size */
+    #headline #h1 {
+        font-size: 27px; /* Smaller font size */
     }
 
     #innerdiv {
@@ -199,8 +199,10 @@
 
     #headline {
         height: 150px; /* Reduce headline section height */
-        font-size: 16px; /* Smaller font size */
     }
+    #headline h1{
+        font-size: 16px; /* Smaller font size */
+     }
 
     #innerdiv {
          /* Stack grid items in a single column */
@@ -221,9 +223,6 @@
         font-size: 14px; /* Smaller button font size */
     }
 
-    h1 {
-        font-size: 24px; /* Smaller font size for headings */
-    }
 
     p {
         font-size: 16px; /* Adjust paragraph font size */
@@ -236,7 +235,7 @@
         height: 151vh;
         padding: 10px; /* Add padding to avoid content touching edges */
     }
-    #headline h1{
+    #headline #h1{
         font-size: 20px; /* Even smaller font size */
     }
     #headline {

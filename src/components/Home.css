@@ -1,13 +1,12 @@
 #Part1{
     height:100%;
     width: 100%;
-    background-color:rgb(218, 226, 236) ;
+    background-color: #E6F3FF;
     /* background-color: red; */
     display: flex;
 
 }
 #part1-Left{
-     height: 82vh;
      width: 50vw;
      background-color: rgb(230, 243, 255);
      padding: 150px;
@@ -37,7 +36,7 @@
     font-size: 20px;
 }
 #buttons{
-     width: 50%;
+     width: 70%;
      display: flex;
      justify-content: space-evenly;
 }
@@ -86,7 +85,7 @@
 @media (max-width:1440px){
    #part1-Left {
        padding:80px; /* Reduce padding for medium screens */
-       height: 73vh;
+       
    }
    #part1-right img {
        margin-left: 76px; /* Adjust image position */
@@ -99,14 +98,10 @@
 
    }
    #part1-right-inner{
-    height: auto;
     width: auto;
     
 
 }
-   #part1-right{
-      height: 73vh;
-   }
    #buttons {
        margin-right: 100px; 
        width: 30vw;
@@ -116,8 +111,7 @@
 
 @media (max-width:1024px) {
    #part1-Left {
-       padding: 30px; /* Reduce padding for medium screens */
-       height: 55vh;
+       padding: 63px; /* Reduce padding for medium screens */
    }
 
    #part1-Left h1 {
@@ -127,10 +121,7 @@
    #part1-Left p {
        font-size: 18px; /* Adjust paragraph font size */
    }
-   #part1-right{
-    height: 55vh;
- }
-
+   
    #buttons button {
        font-size: 20px; /* Adjust button font size */
        width: 10rem;
@@ -142,12 +133,6 @@
        
        width: 35vw;
    }
-   #part1-right-inner{
-    height: auto;
-    width: auto;
-
-}
-  
 }
 
 @media (max-width: 992px) {
@@ -184,7 +169,7 @@
 
 @media (max-width: 768px) {
     #part1-Left {
-        padding: 60px; /* Further reduce padding */
+        padding: 68px; /* Further reduce padding */
     }
 
     #part1-Left h1 {
@@ -211,7 +196,6 @@
           flex-direction: column;
     }
     #part1-Left {
-        height: 44vh;
         padding: 30px; /* Minimal padding for very small screens */
         text-align: center; /* Center-align text */
     }
@@ -235,43 +219,6 @@
        
     }
 
-    #part1-right img {
-        height: 345px; /* Adjust image height */
-        width: 300px;
-        margin-left: 50px; /* Remove margin */
-    }
-}
-@media (max-width: 375px) {
-    #Part1{
-          flex-direction: column;
-    }
-    #part1-Left {
-        height: 49vh;
-        padding: 30px; /* Minimal padding for very small screens */
-        text-align: center; /* Center-align text */
-    }
-
-    #part1-Left h1 {
-        font-size: 4vh; /* Larger font size for heading */
-    }
-
-    #part1-Left p {
-        font-size: 13px; /* Adjust font size */
-    }
-    #buttons{
-         /* background: #000; */
-         width: 80vw;
-         align-items: center;
-         
-    }
-    #buttons button {
-        font-size: 15px; /* Even smaller font size */
-        width: 15rem;
-       
-    }
-    #part1-right{
-         height: 31vh;
-    }
     #part1-right img {
         height: 345px; /* Adjust image height */
         width: 300px;
