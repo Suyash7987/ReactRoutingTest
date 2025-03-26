@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 function Home() {
 
@@ -13,10 +13,12 @@ function Home() {
 
   }
   function handleStart(){
-      navigate('/SignUp')
+      navigate('/Login')
   }
+  
   return (
     <>
+ 
       <div id="Part1">
         <div id="part1-Left">
          <i class="ri-eye-line"> OPTUM - GLASSES AND EYEWEAR</i>

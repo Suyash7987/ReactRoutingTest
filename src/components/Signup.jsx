@@ -1,5 +1,5 @@
 import React from "react";
-import "./Login.css";
+import "./Signup.css";
 import { useForm } from "react-hook-form";
 import Footer from "./Footer";
 
@@ -19,8 +19,11 @@ function SignUp() {
     <>
       <div id="Loginpage">
         <div id="Login">
+          <div id="upperlogin">
+            <h1>WELCOME TO OPTUM</h1>
+          </div>
           <div id="Login-Left">
-           
+            <img src="Loginbgc2.jpg" alt="" />
           </div>
           <div id="Login-Right">
             <h1>Sign up</h1>
@@ -73,8 +76,14 @@ function SignUp() {
                   {errors.PassWord.message}
                 </p>
               )}
-              <input type="Submit" />
+              <button>Submit</button>
             </form>
+            <div id="Signup-Lower"
+                         
+            >
+                <p>Already have an account?</p>
+                <button>Login</button>
+              </div>
           </div>
         </div>
       </div>

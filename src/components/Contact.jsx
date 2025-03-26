@@ -52,7 +52,7 @@ function Contact() {
               title="Should only contains Letter(A-Z,a-Z) and Spaces"
             />
             {errors.Name && (
-              <p style={{marginTop:"-8px"}}>
+              <p>
                 {errors.Name.message}
               </p>
             )}
@@ -66,7 +66,7 @@ function Contact() {
               placeholder="Email"
             />
             {errors.Email && (
-              <p style={{marginTop:"-8px"}}>{errors.Email.message}</p>
+              <p>{errors.Email.message}</p>
             )}
             </div>
             <div id="three">
@@ -88,7 +88,7 @@ function Contact() {
               placeholder="Contact Number"
             />
             {errors.Contact && (
-              <p style={{marginTop:"-8px"}}>
+              <p>
                 {errors.Contact.message}
               </p>
             )}
