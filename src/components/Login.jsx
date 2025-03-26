@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { UserCred } from "./Usernames.js";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+
 
 function Login({ setUserLogined }) {
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
+  const [Eye, setEye] = useState(true);
   const navigate = useNavigate();
   function handleSignup() {
     navigate("/Signup");
@@ -19,7 +21,10 @@ function Login({ setUserLogined }) {
       navigate("/Product");
     }
   }
-
+  
+  function eyeHover(){
+    setEye(!Eye);
+  }
   const {
     register,
     handleSubmit,
@@ -35,16 +40,20 @@ function Login({ setUserLogined }) {
     <>
       <div id="Loginpage">
         <div id="Login">
-          <div id="upperlogin">
-            <h1>WELCOME BACK..!!</h1>
-          </div>
           <div id="Login-Left">
-            <img src="Loginbgc2.jpg" alt="" />
+          <div id="Login-Left-Upper">
+          <i onMouseEnter={eyeHover} onMouseOut={eyeHover} className={Eye?"ri-eye-close-fill":"ri-eye-line"}></i>
+              </div>
+              <div id="Login-Left-Lower">
+              <h1>The <span>Trend</span> is Waiting for you</h1>
+              <p>*Login and awail the best eyewear at the best discount</p>
+              </div>
           </div>
           <div id="Login-Right">
             <h1>Login</h1>
             <h4> Welcome , Please Login to your account</h4>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} >
+              <div id="Login1">
               <input
                 {...register("UserName", {
                   required: "*UserName Required ",
@@ -56,24 +65,17 @@ function Login({ setUserLogined }) {
                 onChange={(e) => setUserName(e.target.value)}
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
-              <br />
-              <br />
               {errors.UserName && (
                 <p
-                  style={{
-                    position: "absolute",
-                    marginTop: "-3.5%",
-                    marginLeft: "45px",
-
-                    color: "red",
-                  }}
                 >
                   {errors.UserName.message}
                 </p>
               )}
+              </div>
+              <div id="Login2">
               <input
                 {...register("PassWord", {
-                  required: "Password Required ",
+                  required: "*Password Required ",
                 })}
                 type="password"
                 placeholder="Password"
@@ -81,23 +83,14 @@ function Login({ setUserLogined }) {
                 onChange={(e) => setPassword(e.target.value)}
                 title="Should only contains Letter(A-Z,a-Z) and Spaces"
               />
-              <br />
-              <br />
               {errors.PassWord && (
-                <p
-                  style={{
-                    position: "absolute",
-                    marginTop: "-3.5%",
-                    marginLeft: "45px",
-                    color: "red",
-                  }}
-                >
+                <p>
                   {errors.PassWord.message}
                 </p>
               )}
+              </div>
+
               <button onClick={handleLogin}>Submit</button>
-              <br />
-              <br />
               <button onClick={handleSignup}>Sign up</button>
             </form>
           </div>

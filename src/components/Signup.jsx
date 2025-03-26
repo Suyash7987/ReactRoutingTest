@@ -19,11 +19,8 @@ function SignUp() {
     <>
       <div id="Loginpage">
         <div id="Login">
-          <div id="upperlogin">
-            <h1>WELCOME TO OPTUM</h1>
-          </div>
           <div id="Login-Left">
-            <img src="Loginbgc2.jpg" alt="" />
+           
           </div>
           <div id="Login-Right">
             <h1>Sign up</h1>

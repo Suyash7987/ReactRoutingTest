@@ -37,8 +37,11 @@ function Contact() {
           <p>9412658489</p>
         </div>
         <div id="Middle-Right">
-          <h2>Fill out the form and we’ll listen</h2>
+          <h4>Share your thoughts we’d Love to listen</h4>
+          <h2>Let's Talk</h2>
+
           <form onSubmit={handleSubmit(onSubmit)}>
+            <div id="one">
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Name", {
                 required: " *Name is required",
@@ -48,39 +51,25 @@ function Contact() {
               placeholder="Name"
               title="Should only contains Letter(A-Z,a-Z) and Spaces"
             />
-            <br />
-            <br />
             {errors.Name && (
-              <p
-                style={{
-                  position: "absolute",
-                  marginTop: "-1.5%",
-                  color: "red",
-                }}
-              >
+              <p style={{marginTop:"-8px"}}>
                 {errors.Name.message}
               </p>
             )}
+            </div>
+            <div id="two">
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Email", {
                 required: "*Email is required",
               })}
               type="email"
               placeholder="Email"
-            />{" "}
-            <br />
-            <br />
+            />
             {errors.Email && (
-              <p
-                style={{
-                  position: "absolute",
-                  marginTop: "-1.5%",
-                  color: "red",
-                }}
-              >
-                {errors.Email.message}
-              </p>
+              <p style={{marginTop:"-8px"}}>{errors.Email.message}</p>
             )}
+            </div>
+            <div id="three">
             <input className={`form-input ${errors.Name ? "error-border" : ""}`}
               {...register("Contact", {
                 required: " *Contact is Required",
@@ -98,22 +87,15 @@ function Contact() {
               type="text"
               placeholder="Contact Number"
             />
-            <br />
-            <br />
             {errors.Contact && (
-              <p
-                style={{
-                  position: "absolute",
-                  marginTop: "-1.5%",
-                  color: "red",
-                }}
-              >
+              <p style={{marginTop:"-8px"}}>
                 {errors.Contact.message}
               </p>
             )}
+            </div>
             <textarea {...register("Message")} placeholder="Message"></textarea>
             <br /> <br />
-            <input type="submit" style={{ width: "100px" }} />
+            <button>Submit</button>
           </form>
         </div>
       </div>
