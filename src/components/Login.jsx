@@ -1,61 +1,73 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { UserCred } from "./Usernames.js";
 import { useForm } from "react-hook-form";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
+import { app } from "../firebase.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
-function Login({ setUserLogined }) {
+function Login() {
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
+  const [ConfirmPassword, setConfirmPassword] = useState("");
   const [Eye, setEye] = useState(true);
-  const [isSignup, setIsSignup] = useState(false); // State to toggle between login and signup views
+  const [isSignup, setIsSignup] = useState(false); 
   const navigate = useNavigate();
+
+  const auth = getAuth(app); // Firebase authentication instance
 
   function handleSignup() {
     setIsSignup(true); // Switch to signup view
   }
 
-  function handleLogin() {
-    if (UserName === UserCred.Name && Password === UserCred.password) {
+  // Handle login using Firebase authentication
+  async function handleLogin() {
+    try {
+      if (UserName === "" || Password === "") {
+        alert("Please Enter Email or Password");
+        return;
+      }
+
+      const userCredential = await signInWithEmailAndPassword(auth, UserName, Password);
       localStorage.setItem("userLogined", "true");
-      setUserLogined(true);
       navigate("/Profile");
-    }else if(UserName ==="" || Password ===""){
-       alert("Please Enter Email or Password")
-    
-  } else{
-     alert("Invalid Email or Password")
-  }
+    } catch (error) {
+      alert("Invalid Email or Password");
+    }
+    reset(); 
+    setUserName("")
+    setPassword("")
   }
 
-  function handleSubmitSignup() {
-    // Handle the signup logic here
-    // For example, validate and save user credentials
-    console.log("Signup successful", { UserName, Password });
-    setIsSignup(false); // Go back to login after successful signup
-    navigate("/Login"); // Redirect to the Login page after signup
+  // Handle signup using Firebase authentication
+  async function handleSubmitSignup() {
+    if (Password !== ConfirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, UserName, Password);
+      console.log("Signup successful", userCredential.user);
+      setIsSignup(false); // Go back to login after successful signup
+      navigate("/Login"); // Redirect to the Login page after signup
+    } catch (error) {
+      console.log("Error signing up:", error.message);
+      alert("Error signing up: " + error.message)
+    }
   }
+
   function eyeHover() {
     setEye(!Eye);
   }
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
   function onSubmit(data) {
     console.log("Submitting the Form...", data);
-    
-    
-    UserCred.Name = data.UserName;
-    UserCred.password = data.PassWord;
-    
-    console.log("User Credentials Updated: ", UserCred);
-
     reset(); 
+    setUserName("")
+    setPassword("")
   }
 
   return (
@@ -74,9 +86,7 @@ function Login({ setUserLogined }) {
               <h1>
                 The <span>Trend</span> is Waiting for you
               </h1>
-              <p>
-                *Login and avail the best eyewear at the best discount
-              </p>
+              <p>*Login and avail the best eyewear at the best discount</p>
             </div>
           </div>
           <div id="Login-Right">
@@ -93,7 +103,6 @@ function Login({ setUserLogined }) {
                   placeholder="Email"
                   value={UserName}
                   onChange={(e) => setUserName(e.target.value)}
-                  title="Should only contain Letter(A-Z,a-Z) and Spaces"
                 />
                 {errors.UserName && <p>{errors.UserName.message}</p>}
               </div>
@@ -107,7 +116,6 @@ function Login({ setUserLogined }) {
                   placeholder="Password"
                   value={Password}
                   onChange={(e) => setPassword(e.target.value)}
-                  title="Should only contain Letter(A-Z,a-Z) and Spaces"
                 />
                 {errors.PassWord && <p>{errors.PassWord.message}</p>}
               </div>
@@ -120,15 +128,18 @@ function Login({ setUserLogined }) {
                     })}
                     type={Eye ? "password" : "text"}
                     placeholder="Confirm Password"
-                    title="Please confirm your password"
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                   {errors.ConfirmPassword && <p>{errors.ConfirmPassword.message}</p>}
                 </div>
               )}
-
-              <button onClick={handleLogin} >
+            
+              {isSignup?<button type="submit">
                 {isSignup ? "Sign Up" : "Login"}
-              </button>
+              </button>:
+              <button onClick={handleLogin} type="submit">
+               Login
+            </button>}
               <br />
               <a onClick={isSignup ? () => setIsSignup(false) : handleSignup}>
                 {isSignup ? "Already have an account? " : "Don't have an account? "}

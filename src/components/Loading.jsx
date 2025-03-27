@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Login from './Login';
+import "./Loading.css";
 function Loading({userLogined,setUserLogined}) {
    const [Loading, setLoading] = useState(true)
   

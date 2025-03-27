@@ -13,7 +13,7 @@
     
 }
 #main5in3,#main5in4,#main5in5 {
-    font-size: 11px;
+    font-size: 17px;
     text-align: center;
     width: 100%;
     
@@ -125,6 +125,7 @@
         padding: 2vh 2vh;
         /* Minimal padding on the smallest screens */
   align-items: center;
+  gap: 50px;
         /* Center align text */
         flex-direction: column;
     }
@@ -138,10 +139,10 @@
     #main5in2 i{
       font-size: 37px;
     }
-    }
+   
     #main5in3,#main5in4,#main5in5{
         font-size:16px;
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
     #main5in2-ic{
@@ -161,3 +162,4 @@
         text-align: left;
           
     }
+}
